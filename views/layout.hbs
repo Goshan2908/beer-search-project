@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <title>BEER</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bangers&display=swap');
+  </style>
+</head>
+<div class="wrapper" style="background-color:#000000 ; " >
+  <nav >
+    <ul class="hr" >
+      {{#if username}}
+      <div class="btn-group d-flex justify-content-around" role="group" aria-label="Basic outlined example">
+      <a href="/user/logout" class="btn btn-outline-primary"> Выйти</a>
+      <a href="/user/personal" class="btn btn-outline-primary">Личный кабинет</a>
+      <a href="/" class="btn btn-outline-primary">Главная</a>
+  </div>
+
+      {{else}}
+      <div class="btn-group d-flex justify-content-around" role="group" aria-label="Basic outlined example">
+        <div class="btn btn-outline-primary"><a href="/user/logup">Зарегистрироваться</a></div>
+        <div class="btn btn-outline-primary"> <a href="/user/login">Войти</a></div>
+<div class="btn btn-outline-primary"> <a href="/">Главная</a></div>
+      </div>
+      {{/if}}
+    </ul>
+  </nav>
+</div>
+<body style="background-color:#E6E6FA">
+  {{{body}}}
+</body>
+</html>

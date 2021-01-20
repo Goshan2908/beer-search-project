@@ -1,0 +1,47 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bungee+Outline&display=swap');
+</style>
+<script defer src="/addmany.js"></script>
+
+{{#each response}}
+
+<div style="background-color:#E6E6FA">
+
+
+
+
+  <div class="d-flex justify-content-around" style="border: 1rem solid;">
+    <div style="font-family: 'Bangers', cursive;width: 200px;">
+      <h1>{{this.name}}</h1>
+    </div>
+    <div><img id='imagebeer' style="max-height: 300px;" src="{{this.image_url}}" alt=""> </div>
+
+    <div id='abv' style="font-size: 20px;"> Крепость {{this.abv}}</div>
+    <div id='food' style="font-family: 'Bangers', cursive;font-size: 30px;width: 500px;">{{this.food_pairing}}</div>
+
+  {{#if ../username}}
+
+  {{!-- <button type="submit" class="btn btn-primary" >ADD BEER</button> --}}
+  <a id='addbeer' href="/randombeer" class="btn btn-primary">ADD BEER</a>
+
+  {{/if}}
+
+  </div>
+  
+  <hr>
+
+
+
+</div>
+
+
+{{/each}}
+
+
+
+
+
+
+
+
+
